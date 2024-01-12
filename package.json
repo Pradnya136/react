@@ -1,0 +1,32 @@
+{
+  "name": "my-react",
+  "version": "1.0.0",
+  "description": "react projects",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pradnya136/react.git"
+  },
+  "keywords": [
+    "react",
+    "react.js"
+  ],
+  "author": "Pradnya Sonawane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pradnya136/react/issues"
+  },
+  "homepage": "https://github.com/Pradnya136/react#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

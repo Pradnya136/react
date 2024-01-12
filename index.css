@@ -1,0 +1,39 @@
+#head{
+    color: rgb(57, 112, 175);
+}
+
+#wrapper{
+    background-color:'#333';
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    background-color: rgb(70, 168, 229);
+    border-radius: 10px;
+    padding: 15px;
+    align-items: center;
+    box-shadow: 1px 5px 55px rgb(107, 135, 155);
+    text-shadow: 1px 5px 5px white;
+
+}
+.icon{
+    background-color: rgb(106, 180, 226);
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 5px 55px rgb(107, 135, 155);
+    text-shadow: 1px 5px 5px white;
+}
+.searchbar{
+    width: 1400px;
+    background-color: rgb(157, 204, 237);
+    display: flex;
+    height: 50px;
+    border-radius:5px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 5px 55px rgb(107, 135, 155);
+
+}
