@@ -18,6 +18,21 @@ to initialize git - git init
 git add .
 git commit -m "commit"
 
-git remote add origin https://ypurgithubrepo
+git remote add origin https://yourgithubrepo
 git push -u origin master (as your default branch name would main den do main or else master)
     (you can change your default branch on github settings > default branch > switch symbol)
+----------------------------------------------------------------------------------------------
+
+virutalDOM - virtualdom is a programming concept where an ideal or virtual represtation of ui is kept in a memory and sycned with 
+real dom by the library such as react dom. is called as reconcilation.
+
+reconcilation - is core algorithm in react which compares current state to previous state in dom to make the particular necessary updates
+instead updating whole ui.
+
+react fiber - a new reconciler in react, its a complete rewrite of react core algorithm.It enables incremental rendering which divides
+rendering working into smalls chunks and updates efficiently. react fiber is designed as asycnrous means it can interpreted and time
+react fiber has tree based data structure represtation of dom which it uses to makes updates. it does this by checking current state
+with previous state and make the changes which makes it more smoother and responsive.
+
+config driven ui - is an approach / technique where ui of website is created based on configuration file. config driven ui determines the 
+layout and content in the components, basically it is an approach to create website ui based on the data recevied from API.
