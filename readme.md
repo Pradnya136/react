@@ -36,3 +36,9 @@ with previous state and make the changes which makes it more smoother and respon
 
 config driven ui - is an approach / technique where ui of website is created based on configuration file. config driven ui determines the 
 layout and content in the components, basically it is an approach to create website ui based on the data recevied from API.
+
+optional chaining =  to use optional chaining (?.) to handle potential undefined values. This way, if any property in the chain is undefined, it won't throw an error:
+--------------------------------------------------------
+
+Assignment 3 - 
+fetching swiggys api  = swiggy.com > inspect > reload page > network > fetch xhr  search fr resto list

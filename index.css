@@ -1,40 +1,66 @@
-#head{
-    color: rgb(57, 112, 175);
-    background-color: aliceblue;
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-#wrapper{
-    background-color:'#333';
+.header-wrapper{
     display: flex;
-    height: 50px;
     justify-content: space-between;
+    background-color: black;
     align-items: center;
+
 }
 .logo{
-    background-color: rgb(70, 168, 229);
-    border-radius: 10px;
-    padding: 15px;
-    align-items: center;
-    box-shadow: 1px 5px 55px rgb(107, 135, 155);
-    text-shadow: 1px 5px 5px white;
+    padding-left: 10px;
+    height: 90px;
+    width: 90px;
+}
+.nav-items-div{
+    background-color: black;
+}
+.nav-items-div > ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.nav-items-div > ul > li{
+    list-style: none;
+    padding: 10px;
+    font-size: 18px;
+    color: gold;
 
 }
-.icon{
-    background-color: rgb(106, 180, 226);
-    align-items: center;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 1px 5px 55px rgb(107, 135, 155);
-    text-shadow: 1px 5px 5px white;
-}
-.searchbar{
-    width: 1400px;
-    background-color: rgb(157, 204, 237);
+
+.restocard-wrapper{
+    background-color: rgb(230, 223, 223);
     display: flex;
-    height: 50px;
-    border-radius:5px;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 5px 55px rgb(107, 135, 155);
+    height: 400px;
+    width: 250px;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+}
+.restocardfont0{
+    font-size: 20px;
+    
+}
 
+.restocardfont1{
+    font-size: 15px;
+    
+}
+
+.restologo{
+    height: 180px;
+    width: 180px;
+    padding: 10px;
+}
+.res-container{
+    background-color: rebeccapurple;
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+   
 }
