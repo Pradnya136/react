@@ -39,6 +39,11 @@ body{
     flex-direction: column;
     text-align: center;
     height: auto;
+    cursor: pointer;
+
+}
+.restocard-wrapper:hover{
+    background-color: rgb(217, 218, 220);
 }
 .restocardfont0{
     font-size: 20px;
@@ -56,11 +61,24 @@ body{
     padding: 10px;
 }
 .res-container{
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
     display: flex;
     flex-wrap: wrap;
    justify-content: space-between;
     align-items: center;
     padding: 20px;
    
+}
+.eg{
+    height: 50px;
+    width: 150px;
+    margin: 50px;
+    padding: 50px;
+    background-color: tan;
+  
+}
+.searchbarbox{
+    width: 250px;
+    height: 50px;
+    font-size: 15px;
 }
