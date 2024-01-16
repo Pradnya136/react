@@ -5,21 +5,30 @@ import { useState } from "react";
 const Body = ()=>{
    
     const [listOfResto, setListOfResto] = useState(resList)
-    let [searchInput, setSearchInput] = useState("")
 
-    let capture = () => event =>{ setSearchInput(event.target.value)
-        startLetter = event.target.value;
-     
-        filtered = resList.filter(listOfResto => listOfResto.info.name.toLowerCase() == startLetter)
-        console.log(startLetter)
-        console.log(filtered)
-    }
+
     return (
         <div className="body">
             <div className="searchbar">
                 <form> 
-                <input type="text" className="searchbarbox" placeholder="Search for Resto by entering name " value={searchInput}
-                    onChange={capture()}>
+                <input type="text"
+                       className="searchbarbox" 
+                       placeholder="Search for Resto by entering name " 
+                       onChange={()=>{
+                        const filterd = resList.filter(res => res.info.name.toLowerCase().startsWith(event.target.value));
+                        console.log(filterd,"< filterd")
+
+                        let filteredDone = ()=>{
+                            if(event.target.value == ""){
+                               return setListOfResto(resList) 
+                            }
+                            else{
+                                return setListOfResto(filterd)
+                            }
+                        }
+                        filteredDone()
+                       }}
+                       >
                   
                 </input>
                 </form>
