@@ -38,6 +38,7 @@ config driven ui - is an approach / technique where ui of website is created bas
 layout and content in the components, basically it is an approach to create website ui based on the data recevied from API.
 
 optional chaining =  to use optional chaining (?.) to handle potential undefined values. This way, if any property in the chain is undefined, it won't throw an error:
+In JavaScript, optional chaining is an operator that lets users safely try to access values nested inside of an object. It was introduced in ES2020.
 
 
 Exporting files have two ways - 1. default export 2. named export 
@@ -55,7 +56,30 @@ react hooks - react hooks in simple term is a simple javascript utility function
 why we need useState hook - it allows you to add state to functional component, it returns an array with two values, first is current state n second is fucntion to be updated.the hook takes initial state value as an arg and returns updated state value when the setter is function is called.
  to change the state of variable by using simple and less code. it helps to update dom effeicntly and more faster.
 
+
+shimmer UI ? - A shimmer UI is a version of the UI that doesn't contain actual content, but instead mimics the layout and shapes of the content that will eventually appear
+
+Microservice - it is an software artitechture pattern that builds software using collection of services which are scaled , developed deployed and updated indepentendly, here specific team work for specific services, also use of mutliple tech stacks are used.
+
+Monolith - it is an software artitechture pattern where all major features, fucntions are kept together in one unit. It consist of UI, Frontend ,Backend, and Database all files together.
+
+A monolithic application is built as a single unified unit while a microservices architecture is a collection of smaller, independently deployable services
+
+why we need useEffect hook - if we want to update something after the Dom has been updated we use useEffect. it take 2 arg, function cb n array of dependency
+
+What is the difference between JS expression and JS statement
+    - Expression produces value or ends ups giving value where as statement are instructions or commands which can include expression to perform specific action.
+
+Conditional Rendering - it is a process of displaying different content on basis of a condition inshort if you render something according to a condition it is called as conditional rendering.
+
+CORS = cross origin resource sharing is a mechanism of brower that allows controlled access to resources outside the domain
+CORS is a security feature that restricts web pages from making requests to a different domain, protocol, or port than the one that served the web page. It helps to ensure that only authorized domains can access sensitive data or resources
+
+
+
+
 --------------------------------------------------------
 
 Assignment 3 - 
 fetching swiggys api  = swiggy.com > inspect > reload page > network > fetch xhr  search fr resto list
+

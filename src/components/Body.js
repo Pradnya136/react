@@ -1,6 +1,6 @@
 import RestoCard from "./RestoCard";
 import resList from "../utils/mockData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Body = ()=>{
    
@@ -14,11 +14,11 @@ const Body = ()=>{
                 <input type="text"
                        className="searchbarbox" 
                        placeholder="Search for Resto by entering name " 
-                       onChange={()=>{
-                        const filterd = resList.filter(res => res.info.name.toLowerCase().startsWith(event.target.value));
+                       onChange={(event)=>{
+                        const filterd = resList.filter(res => res.info.name.toLowerCase().includes(event.target.value.toLowerCase()));
                         console.log(filterd,"< filterd")
 
-                        let filteredDone = ()=>{
+                        const filteredDone = ()=>{
                             if(event.target.value == ""){
                                return setListOfResto(resList) 
                             }
