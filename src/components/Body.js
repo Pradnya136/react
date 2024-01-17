@@ -1,12 +1,18 @@
 import RestoCard from "./RestoCard";
 import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
-
+import Shimmer from "./Shimmer";
 const Body = ()=>{
    
     const [listOfResto, setListOfResto] = useState(resList)
 
+    useEffect(()=>{
+        <Shimmer.js/>,[]
+        console.log("useffect called")
+    })
 
+    console.log("calling fr useeffect done")
+ 
     return (
         <div className="body">
             <div className="searchbar">

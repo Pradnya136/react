@@ -82,3 +82,47 @@ body{
     height: 50px;
     font-size: 15px;
 }
+
+/* shimmer-ul-styles */
+
+.shimmer-nav{
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.shimmer-searchbar{
+    width: 250px;
+    background-color: rgb(60, 16, 171);
+    display: flex;
+}
+.shimmer-top-rated-btn{
+    background-color: blue;
+    width: 20px;
+    height: 10px;
+    float: left;
+}
+.shimmer-card-wrapper{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 250px;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    cursor: pointer;
+}
+.shimmer-card{
+    background-color: blue;
+    display: flex;
+  
+}
+.login-btn{
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: gold;
+    font-weight: bolder;
+}
