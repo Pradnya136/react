@@ -1,19 +1,29 @@
 import RestoCard from "./RestoCard";
-import resList from "../utils/mockData";
-import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { useState, useEffect } from "react";
+
 const Body = ()=>{
-   
-    const [listOfResto, setListOfResto] = useState(resList)
+   //local state variable = super powerful variable
+    const [listOfResto, setListOfResto] = useState([])
 
-    useEffect(()=>{
-        <Shimmer.js/>,[]
-        console.log("useffect called")
-    })
+    useEffect(() => {
+        fetchData();
+        console.log("inside useffect fn")
+    },[]);
 
-    console.log("calling fr useeffect done")
- 
-    return (
+
+    const fetchData = async () => {
+      const data = await fetch(
+            "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D18.5204303%26lng%3D73.8567437%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING"
+            );
+      const json = await data.json();
+      console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
+      //optional chaining - handling data in better way it does not throw error if we dont get undefined data
+      setListOfResto(json.data.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants)
+    };
+    
+    //conditional rendering
+    return listOfResto.length === 0?<Shimmer/>:(
         <div className="body">
             <div className="searchbar">
                 <form> 
@@ -58,7 +68,7 @@ const Body = ()=>{
         </div>
     
     )
-    
+
 }
 
 

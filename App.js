@@ -4,10 +4,12 @@ import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 // import Example from "./src/components/Prac";
 
+
 const AppLayout = () => {
     return(
-        <div className="app">
+        <div className="main-pg">
             {/* <Example/> */}
+
             <Header/>
             <Body/>
         </div>

@@ -85,39 +85,31 @@ body{
 
 /* shimmer-ul-styles */
 
-.shimmer-nav{
-    background-color: blue;
+
+.shimmer-searchbar{
+    width: 25%;
+    height: 65px;
+    background-color: #f0f0f0;
+    display: flex;
+}
+
+.shimmer-card-wrapper{
+ 
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-}
-.shimmer-searchbar{
-    width: 250px;
-    background-color: rgb(60, 16, 171);
-    display: flex;
-}
-.shimmer-top-rated-btn{
-    background-color: blue;
-    width: 20px;
-    height: 10px;
-    float: left;
-}
-.shimmer-card-wrapper{
-    background-color: blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    width: 250px;
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    cursor: pointer;
 }
 .shimmer-card{
-    background-color: blue;
+    background-color: #f0f0f0;
     display: flex;
+    height: 350px;
+    width: 250px;
+    margin: 15px;
+
   
+}
+.shimmer-main-wrapper{
+    display: flex;
+    flex-wrap: wrap;
 }
 .login-btn{
     width: 80px;
