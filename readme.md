@@ -22,7 +22,9 @@ git remote add origin https://yourgithubrepo
 git push -u origin master (as your default branch name would main den do main or else master)
     (you can change your default branch on github settings > default branch > switch symbol)
 
-https://jsonplaceholder.typicode.com/ = a free online REST API that you can use whenever you need some fake data   
+https://jsonplaceholder.typicode.com/ = a free online REST API that you can use whenever you need some fake data
+
+used - https://corsproxy.org/ for solving cors issue instead of corsproxy.io , we can also use cors-anywhere.herokuapp.com
 ----------------------------------------------------------------------------------------------
 
 virutalDOM - virtualdom is a programming concept where an ideal or virtual represtation of ui is kept in a memory and sycned with 
