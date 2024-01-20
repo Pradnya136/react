@@ -21,11 +21,13 @@ body{
     justify-content: space-around;
     padding: 20px;
 }
-.nav-items-div > ul > li{
+/* link styles */
+.custom-link{
     list-style: none;
     padding: 10px;
     font-size: 18px;
     color: gold;
+    text-decoration: none;
 
 }
 
@@ -117,4 +119,23 @@ body{
     border-radius: 20px;
     background-color: gold;
     font-weight: bolder;
+    cursor: pointer;
+}
+/* 
+error pg */
+.error_img{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+   
+}
+.wrapper-err-img{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: cursive;
+ 
+
 }

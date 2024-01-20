@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 
 const NavItems = () => {
 
@@ -14,12 +16,12 @@ const NavItems = () => {
 
     return (
         <div className="nav-items-div">
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Contact</li>
-                <li>Cart</li>
-                <li>
+            <ul className="ul">
+                <Link to ={"/"} className="custom-link"><li>Home</li></Link>
+                <Link to ={"/about"} className="custom-link"><li>About</li></Link>
+                <Link to ={"/contact"} className="custom-link"><li>Contact</li></Link>
+                <li className="custom-link">Cart</li>
+                <li className="custom-link">
                     <button onClick={()=> setState(toggle())}
                     className="login-btn">{state}</button>
                 </li>
