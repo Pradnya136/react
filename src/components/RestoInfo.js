@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import {useParams } from "react-router-dom";
+import { MENU_URL } from "../utils/constant";
+
+
 const RestoInfo = () =>{
+
+const {resId} = useParams();
+console.log(resId,"capturing resId from params")
 
 useEffect(()=>{
     fetchMenu();
@@ -10,53 +17,44 @@ const [resInfo, setResInfo] = useState(null)
 
 
 const fetchMenu = async () => {
-    const data = await fetch("https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Fmenu%2Fpl%3Fpage-type%3DREGULAR_MENU%26complete-menu%3Dtrue%26lat%3D18.5204303%26lng%3D73.8567437%26restaurantId%3D755224%26catalog_qa%3Dundefined%26submitAction%3DENTER"
+    const data = await fetch(MENU_URL+resId
     );
+  
     const json = await data.json();
 
+    console.log(json,"json-data")
 
-   const m_data = json
-   console.log(m_data,"M-data")
-    setResInfo(json)
-// name n all details from data.cards[0]
-//    const m_data = json?.data?.cards[0]?.card?.card?.info
-//    info.costForTwoMessage
-//    cuisines
-//    name
-//    locality
-//    sla.deliveryTime
-
-
-// menu details from data.cards[2]
-// data.cards[2].groupedCard.cardGroupMap.REGULAR.cards
-
-
+    setResInfo(json);
 
 };
 
+if ( resInfo === null) return <Shimmer/>
 
-if ( resInfo === null){
-    return <Shimmer/>
-}else{
+const {name,cuisines,locality,sla,costForTwoMessage} = resInfo?.data?.cards[0]?.card?.card?.info;
+const {itemCards} = resInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
     return (
         <div>
-            <h1>{resInfo.data?.cards[0]?.card?.card?.info?.name}</h1>
-            <h2>{resInfo.data?.cards[0]?.card?.card?.info?.cuisines.join(", ")}</h2>
-            <h2>{resInfo.data?.cards[0]?.card?.card?.info?.locality}</h2>
+            <h1>{name}</h1>
+            <h2>{cuisines.join(", ")}</h2>
+            <h2>{locality}</h2>
 
-            <h2>{resInfo.data?.cards[0]?.card?.card?.info?.sla.deliveryTime} mins</h2> <h2>{resInfo.data?.cards[0]?.card?.card?.info?.costForTwoMessage}</h2>
+            <h2>{sla.deliveryTime} mins</h2> <h2>{costForTwoMessage}</h2>
 
 
             <h2>Menu:</h2>
 
             <ul>
                 
-                <li>1st item</li>
-                <li>2nd item</li>
-                <li>3rd item</li>
+              {itemCards.map(items => 
+                    <li key={items.card?.info?.id}>
+                     {items.card?.info?.name} -  Rs:
+                     {items.card?.info?.price/100 || items.card?.info?.defaultPrice/100}    
+                    </li>)}
+              
+
             </ul>
         </div>
     )
 }
-}
+
 export default RestoInfo;

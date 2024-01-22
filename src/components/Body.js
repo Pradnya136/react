@@ -3,9 +3,14 @@ import Shimmer from "./Shimmer";
 
 import { useState, useEffect } from "react";
 
+import { Link } from "react-router-dom";
+
+
 const Body = ()=>{
    //local state variable = super powerful variable
-    const [listOfResto, setListOfResto] = useState([])
+    const [listOfResto, setListOfResto] = useState([]);
+
+
 
     useEffect(() => {
         fetchData();
@@ -14,13 +19,17 @@ const Body = ()=>{
 
 
     const fetchData = async () => {
-      const data = await fetch("https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Fmenu%2Fpl%3Fpage-type%3DREGULAR_MENU%26complete-menu%3Dtrue%26lat%3D18.5204303%26lng%3D73.8567437%26restaurantId%3D755224%26catalog_qa%3Dundefined%26submitAction%3DENTER");
+      const data = await fetch("https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D18.5204303%26lng%3D73.8567437%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING");
       const json = await data.json();
+      console.log(json,"body json")
       console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
       //optional chaining - handling data in better way it does not throw error if we dont get undefined data
       setListOfResto(json.data.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants)
     };
     
+
+
+
     //conditional rendering
     return listOfResto.length === 0?<Shimmer/>:(
         <div className="body">
@@ -58,13 +67,22 @@ const Body = ()=>{
                     Top Rated Resto's
                 </button>
             </div>
-            <div className="res-container">
+         
+            <div className="res-container" >
                 {
-                    listOfResto.map((res) => (<RestoCard key={res.info.id} resData={res}/>))
+                    listOfResto.map((res) => (
+                    <Link 
+                    key={res.info.id} 
+                    to={"restaurants/" + res.info.id}
+                    >
+                    <RestoCard resData={res}/>
+                    </Link>
+                    )) 
                     // array.map for each res return this expression restocard comp where resdata would be having this each res
                 }
           
             </div>
+        
         </div>
     
     )
