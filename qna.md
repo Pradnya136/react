@@ -48,3 +48,12 @@ The whole website or web-application needs to be loaded on the first request. Th
 Because the whole website or web-application is loaded initially, there is a possibility that there is data downloaded for views you won’t even come across.
 It requires more setup work or even a library. Because server-side is the standard, extra code must be written to make client-side routing possible.
 Search engine crawling is less optimised. Google is making good progress on crawling single-paged-apps, but it isn’t nearly as efficient as server-side routed websites.
+
+
+--------------------------------------------------------------------------------
+
+createMemoryRouter - Instead of using the browser's history, a memory router manages its own history stack in memory.
+It's primarily useful for testing and component development tools like Storybook, but can also be used for running React Router in any non-browser environment means where DOM is not directly available like SSR,Mobile development.
+
+createHashRouter
+This router is useful if you are unable to configure your web server to direct all traffic to your React Router application. Instead of using normal URLs, it will use the hash (#) portion of the URL to manage the "application URL".
