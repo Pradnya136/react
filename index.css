@@ -139,3 +139,7 @@ error pg */
  
 
 }
+/* user style */
+.user{
+    border: 2px blue solid;
+}
