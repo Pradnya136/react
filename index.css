@@ -32,35 +32,82 @@ body{
 }
 
 .restocard-wrapper{
-    background-color: rgb(230, 223, 223);
+    background-color: transparent;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 400px;
-    width: 250px;
+    width: 300px;
     flex-direction: column;
-    text-align: center;
-    height: auto;
     cursor: pointer;
+    height: 400px;
+
+    transition: transform 0.3s ease-in-out;
+    
 
 }
 .restocard-wrapper:hover{
-    background-color: rgb(217, 218, 220);
+ 
+    transform: scale(1.1);
 }
+
+
 .restocardfont0{
-    font-size: 20px;
-    
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-decoration: none;
+    padding-left: 20px;
 }
 
 .restocardfont1{
     font-size: 15px;
-    
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-decoration: none;
+    padding-left: 20px;
+    color: black;
+}
+.restocardfont2{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-decoration: none;
+    padding-left: 20px;
+    color: rgb(96, 94, 94);
+    font-weight: lighter;
+    font-weight: 400;
+  
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+      
+}
+/* restocardlinkcolor */
+.restoLink{
+    text-decoration: none;
+    color: black;
+   
 }
 
+.restoLink:hover{
+  color: black
+   
+}
+.restoLink:active{
+    color: black
+   
+}
+/* restocardlinkcolor */
 .restologo{
     height: 180px;
-    width: 180px;
+    width: 280px;
     padding: 10px;
+    border-radius: 20px;
+    object-fit: cover;
+    filter: drop-shadow(0 4px 4px rgba(10, 10, 10, 0.2));
 }
 .res-container{
     /* background-color: rebeccapurple; */
@@ -79,10 +126,24 @@ body{
     background-color: tan;
   
 }
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(207, 201, 213);
+    
+}
 .searchbarbox{
-    width: 250px;
+    width: 800px;
     height: 50px;
     font-size: 15px;
+    margin: 20px;
+    border-radius: 5px;
+    border-color: rgb(224, 229, 248);
+
+}
+.search-icon{
+  font-size: 40px;
 }
 
 /* shimmer-ul-styles */
@@ -141,5 +202,5 @@ error pg */
 }
 /* user style */
 .user{
-    border: 2px blue solid;
+    border: 2px pink;
 }
