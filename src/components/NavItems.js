@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 import { Link } from "react-router-dom";
-
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const NavItems = () => {
-
+const onlineStatus = useOnlineStatus()
     const [state,setState] = useState("Login");
     const toggle = () => {
         if(state == "Login"){
@@ -17,6 +17,7 @@ const NavItems = () => {
     return (
         <div className="nav-items-div">
             <ul className="ul">
+                <li  className="custom-link">{onlineStatus?"🟢":"🔴"}</li>
                 <Link to ={"/"} className="custom-link"><li>Home</li></Link>
                 <Link to ={"/about"} className="custom-link"><li>About</li></Link>
                 <Link to ={"/contact"} className="custom-link"><li>Contact</li></Link>
