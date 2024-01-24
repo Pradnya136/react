@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import Body from "./src/components/Body";
-import About from "./src/components/About";
+import About from "./src/components/About_class";
 import Contact from "./src/components/Contact";
 import Error from "./src/components/Error";
 import RestoInfo from "./src/components/RestoInfo";

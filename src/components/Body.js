@@ -57,7 +57,7 @@ const Body = ()=>{
                        >
                   
                 </input> 
-                </form><div class="search-icon">&#128269;</div>
+                </form><div className="search-icon">&#128269;</div>
             </div>
             <div className="filter-btn">
                 <button 
