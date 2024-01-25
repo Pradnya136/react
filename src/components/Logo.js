@@ -1,8 +1,11 @@
 import reactLogo from "../../images/reactLogo.png";
 
+
+
+
 const Logo = () => {
     return (
-    <div className="logo-div">
+    <div className="w-32 p-2 " >
         <img className="logo" src={reactLogo} alt="Image of restaurant"></img>
     </div>
 )}

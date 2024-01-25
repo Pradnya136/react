@@ -6,19 +6,19 @@ const RestoCard = ( props ) => {
     const {resData} = props;
     const {name,avgRating,costForTwo,cuisines,cloudinaryImageId,sla,locality} = resData?.info;
     return (
-        <div className="restocard-wrapper">
+        <div className=" w-72 rounded-md m-2 p-3 h-96  hover:scale-105 transition-transform ease-out">
             <img 
             
-            className="restologo"
+            className="w-72 h-48 rounded-lg shadow-xl"
             src={CDN_RESTO_LOGO + cloudinaryImageId}
             alt="resto img">
 
             </img>
-            <h2 className="restocardfont0">{name}</h2>
-            <h3 className="restocardfont1">Rating: {avgRating} {sla.slaString}</h3>
-            <h3 className="restocardfont2">{cuisines.join(", ")}</h3>
-            <h3 className="restocardfont2">{locality}</h3>
-            <h3 className="restocardfont2">{costForTwo}</h3>
+            <h2 className=" text-lg mt-2 mb-1 font-bold">{name}</h2>
+            <h3 className="text-slate-600 font-medium">⭐ {avgRating} | {sla.slaString}</h3>
+            <h4 className="text-slate-600  ">{cuisines.join(", ")}</h4>
+            <h4 className="text-slate-600 ">{locality}</h4>
+            <h4 className="text-slate-600 ">{costForTwo}</h4>
           
           
           

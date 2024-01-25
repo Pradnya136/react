@@ -5,7 +5,7 @@ import NavItems from "./NavItems";
 
 const Header = () => {
     return (
-        <div className="header-wrapper">
+        <div className="flex h-28 border justify-between">
                 <Logo/>
                 <NavItems/>
         </div>

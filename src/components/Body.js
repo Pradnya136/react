@@ -37,11 +37,11 @@ console.log(onlineStatus,"onlinestatus")
     //conditional rendering
     return listOfResto.length === 0?<Shimmer/>:(
         <div className="body">
-            <div className="searchbar">
-                <form> 
+            <div className="bg-slate-100 flex items-center justify-center p-5 ">
+                <form > 
                 <input type="text"
-                       className="searchbarbox" 
-                       placeholder="Search for Resto by entering name " 
+                      className="w-96 p-4 rounded shadow-md"  
+                       placeholder="Search for Restautrant by entering name.. " 
                        onChange={(event)=>{
                         const filterd = resList.filter(res => res.info.name.toLowerCase().includes(event.target.value.toLowerCase()));
                         console.log(filterd,"< filterd")
@@ -59,11 +59,11 @@ console.log(onlineStatus,"onlinestatus")
                        >
                   
                 </input> 
-                </form><div className="search-icon">&#128269;</div>
+                </form><div className="text-4xl p-4 ">&#128269;</div>  
             </div>
-            <div className="filter-btn">
+            <div className="flex items-center justify-center">
                 <button 
-                       className="top-resto-btn"
+                       className="bg-gray-200 p-4 rounded-md shadow-xl m-4 "
                        onClick={()=>{
                        const filteredList = resList.filter(res => res.info.avgRating > 4) ;setListOfResto(filteredList)
                   console.log("fav resto clickeds")
@@ -72,7 +72,7 @@ console.log(onlineStatus,"onlinestatus")
                 </button>
             </div>
          
-            <div className="res-container" >
+            <div className="flex flex-wrap justify-center items-center  " >
                 {
                     listOfResto.map((res) => (
                     <Link 
