@@ -21,6 +21,7 @@ const onlineStatus = useOnlineStatus()
                 <Link to ={"/"} className="custom-link"><li>Home</li></Link>
                 <Link to ={"/about"} className="custom-link"><li>About</li></Link>
                 <Link to ={"/contact"} className="custom-link"><li>Contact</li></Link>
+                {/* <Link to ={"/grocery"} className="custom-link"><li>Grocery</li></Link> */}
                 <li className="custom-link">Cart</li>
                 <li className="bg-amber-400 shadow-lg p-3 rounded ">
                     <button onClick={()=> setState(toggle())}

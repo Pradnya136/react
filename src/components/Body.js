@@ -9,7 +9,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = ()=>{
    //local state variable = super powerful variable
     const [listOfResto, setListOfResto] = useState([]);
-
+    const onlineStatus = useOnlineStatus();
 
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const Body = ()=>{
     },[]);
 
 
-    const fetchData = async () => {
+      const fetchData = async () => {
       const data = await fetch(SWIGGY_MAIN_URL);
       const json = await data.json();
     //   console.log(json,"body json")
@@ -30,7 +30,7 @@ const Body = ()=>{
     };
     
 
-const onlineStatus = useOnlineStatus();
+
 if(onlineStatus === false) return <h1>Looks like your internet connection is gone .. please check your internet </h1>
 console.log(onlineStatus,"onlinestatus")
 
