@@ -1,4 +1,4 @@
-import RestoCard from "./RestoCard";
+import RestoCard, { RestoCardDiscount } from "./RestoCard";
 import Shimmer from "./Shimmer";
 import { useState, useEffect } from "react";
 import { SWIGGY_MAIN_URL } from "../utils/constant";
@@ -6,11 +6,12 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
 
+
 const Body = ()=>{
    //local state variable = super powerful variable
     const [listOfResto, setListOfResto] = useState([]);
     const onlineStatus = useOnlineStatus();
-
+    const RestoCardWithDiscount = RestoCardDiscount(RestoCard);
 
     useEffect(() => {
         fetchData();
@@ -25,7 +26,7 @@ const Body = ()=>{
     //   console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
       //optional chaining - handling data in better way it does not throw error if we dont get undefined data
       resList = json.data.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants;
-    
+    console.log(resList,"json data resto list")
       setListOfResto(json.data.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants)
     };
     
@@ -74,13 +75,9 @@ console.log(onlineStatus,"onlinestatus")
          
             <div className="flex flex-wrap justify-center items-center  " >
                 {
-                    listOfResto.map((res) => (
-                    <Link 
-                    className="restoLink"
-                    key={res.info.id} 
-                    to={"restaurants/" + res.info.id}
-                    >
-                    <RestoCard resData={res}/>
+                    listOfResto.map((res) => (<Link className="restoLink" key={res.info.id} to={"restaurants/" + res.info.id}>
+                        {res.info.aggregatedDiscountInfoV3.header?<RestoCardWithDiscount resData={res}/> : <RestoCard resData={res}/>}
+                   
                     </Link>
                     )) 
                     // array.map for each res return this expression restocard comp where resdata would be having this each res

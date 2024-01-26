@@ -27,4 +27,18 @@ const RestoCard = ( props ) => {
     )
 }
 
+export const RestoCardDiscount = (RestoCard)=>{
+    return (props) =>{
+        const discount = props.resData.info.aggregatedDiscountInfoV3.header;
+        console.log(discount)
+        return(
+            <div>
+                 <label className="absolute bg-black text-white p-2 rounded-lg">{discount}</label>
+                <RestoCard {...props}/>
+               
+            </div>
+        )
+    }
+}
+
 export default RestoCard;
