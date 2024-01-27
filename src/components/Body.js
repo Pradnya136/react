@@ -33,7 +33,7 @@ const Body = ()=>{
 
 
 if(onlineStatus === false) return <h1>Looks like your internet connection is gone .. please check your internet </h1>
-console.log(onlineStatus,"onlinestatus")
+
 
     //conditional rendering
     return listOfResto.length === 0?<Shimmer/>:(
@@ -75,8 +75,8 @@ console.log(onlineStatus,"onlinestatus")
          
             <div className="flex flex-wrap justify-center items-center  " >
                 {
-                    listOfResto.map((res) => (<Link className="restoLink" key={res.info.id} to={"restaurants/" + res.info.id}>
-                        {res.info.aggregatedDiscountInfoV3.header?<RestoCardWithDiscount resData={res}/> : <RestoCard resData={res}/>}
+                    listOfResto.map((res) => (<Link className="restoLink" key={res?.info?.id} to={"restaurants/" + res.info.id}>
+                        {res?.info?.aggregatedDiscountInfoV3?.header?<RestoCardWithDiscount resData={res}/> : <RestoCard resData={res}/>}
                    
                     </Link>
                     )) 

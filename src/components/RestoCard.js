@@ -5,8 +5,8 @@ import {CDN_RESTO_LOGO } from "../utils/constant";
 const RestoCard = ( props ) => {
     const {resData} = props;
     const {name,avgRating,costForTwo,cuisines,cloudinaryImageId,sla,locality} = resData?.info;
-    return (
-        <div className=" w-72 rounded-md m-2 p-3 h-96  hover:scale-105 transition-transform ease-out">
+    return (//scale-105 transition-transform ease-out
+        <div className=" w-72 rounded-md m-2 p-3 h-96  hover:bg-slate-200">
             <img 
             
             className="w-72 h-48 rounded-lg shadow-xl"
@@ -29,12 +29,15 @@ const RestoCard = ( props ) => {
 
 export const RestoCardDiscount = (RestoCard)=>{
     return (props) =>{
+   
         const discount = props.resData.info.aggregatedDiscountInfoV3.header;
-        console.log(discount)
+        const sub_discount = props.resData.info.aggregatedDiscountInfoV3.subHeader;;
+  
         return(
             <div>
-                 <label className="absolute bg-black text-white p-2 rounded-lg">{discount}</label>
+                 <label className="absolute bg-black text-white p-2 rounded-lg">{discount} {sub_discount}</label>
                 <RestoCard {...props}/>
+               
                
             </div>
         )
