@@ -1,27 +1,23 @@
-import InsideDetailsCategory from "./InsideDetailsCategory";
+import ItemList from "./ItemList"
 
-const MenuCategory = (data) =>{
-    // const {itemCards} = data?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card; //getting accordions info
-
-    const itemsCatergory = data?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
-
-    filteredCategory = itemsCatergory.filter(item => item.card.card && item.card.card["@type"] === 'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory')
-    // console.log(filteredCategory,"<<< items filteredCategory")
+const MenuCategory = ({data}) =>{
     
     return (
-  
         <div>
-          <ul className="p-4 m-2 ">
-            {filteredCategory.map(items => 
-                    <li className="p-4 border-b-4 border-gray-300 " key={items.card?.card?.title}>
-                         {items.card?.card?.title} {<span className=" flex justify-end mt-[-30px]">⬇️</span>}
-                         {"details" }
-                        <InsideDetailsCategory data={filteredCategory}/>
-                         
-                    </li>)}
-        </ul>
+            {/* header */}
+            <div  className=" w-12/12  p-2  m-2 py-5 shadow-lg ">
+             <div className="flex justify-between">
+                <span className="font-bold text-sm " >{data.title} ({data.itemCards.length})</span>
+                <span className="">{"⬇️"}</span>
+             </div>
+                <ItemList items={data.itemCards}/>
           
+           </div>
+           {/* body */}
+
+           
         </div>
+
     )
 }
 
