@@ -1,17 +1,24 @@
 import ItemList from "./ItemList"
+import { useState } from "react";
+const MenuCategory = ({data, showItems, setShowIndex}) =>{
 
-const MenuCategory = ({data}) =>{
-    
+// const [showItems,setShowItems] = useState(false)
+
+
+    const handleClick = ()=>{
+        setShowIndex()
+    }
     return (
         <div>
             {/* header */}
-            <div  className=" w-12/12  p-2  m-2 py-5 shadow-lg ">
-             <div className="flex justify-between">
+            <div className=" p-4 my-4 shadow-lg ">
+             <div onClick={handleClick}  className=" flex justify-between cursor-pointer">
                 <span className="font-bold text-sm " >{data.title} ({data.itemCards.length})</span>
                 <span className="">{"⬇️"}</span>
              </div>
-                <ItemList items={data.itemCards}/>
-          
+                {/* {showItems && <ItemList items={data.itemCards}/>} */}
+                {showItems && <ItemList items={data.itemCards}/>}
+                
            </div>
            {/* body */}
 

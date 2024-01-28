@@ -3,6 +3,7 @@ import Shimmer from "./Shimmer";
 import {useParams } from "react-router-dom";
 import useRestoMenu from "../utils/useRestoMenu";
 import MenuCategory from "./MenuCategory"
+import { useState } from "react";
 
 
 const RestoInfo = () =>{
@@ -16,6 +17,7 @@ const resInfo = useRestoMenu(resId);
 const categories = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
     (c) => c.card?.["card"]?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
 );
+const [showIndex,setShowIndex] = useState(null)
 
 // console.log(categories, "geting categories ")
 if ( resInfo === null) return <Shimmer/>
@@ -27,13 +29,13 @@ const {name,cuisines,locality,sla,costForTwoMessage,avgRating,totalRatingsString
     return (
         <div className="  flex flex-col justify-center items-center">
 
-            <div className="flex justify-between mt-2  w-6/12">
+            <div className="flex justify-between mt-2 mb-10 w-6/12">
                 <div>
                     <h1 className="font-bold p-2 mb-2">{name}</h1>
                     <h2 className="font-extralight mx-2 text-xs">{cuisines.join(", ")}</h2>
                     <h2 className="font-extralight mx-2 text-xs">{locality}</h2>
-                    <h2 className="font-extralight mx-2 text-xs py-2">{expectationNotifiers[0].text}</h2>
-                    <h2 className="font-bold text-sm mx-2">{sla.deliveryTime} mins<span className="text-transparent">____</span>{costForTwoMessage}</h2>
+                    {/* <h2 className="font-extralight mx-2 text-xs py-2">{expectationNotifiers[0].text}</h2> */}
+                    <h2 className="font-bold text-sm mt-4 mx-2">{sla.deliveryTime} mins<span className="text-transparent">____</span>{costForTwoMessage}</h2>
                   
                 </div>
                 <div>
@@ -46,11 +48,14 @@ const {name,cuisines,locality,sla,costForTwoMessage,avgRating,totalRatingsString
                
             </div>
             <div className="bg-slate-50 rounded-md w-6/12 mt-4">
-                 {categories.map((category ) => <MenuCategory data={category?.card?.card}/>)}
+                 {categories.map((category,index ) =>
+                    <MenuCategory key={category?.card?.card.title} 
+                    data={category?.card?.card}
+                    showItems={index === showIndex?true:false} 
+                    setShowIndex={()=> setShowIndex(index)}/>)}
              
             </div>
-          
-
+    
         </div>
 
     )
