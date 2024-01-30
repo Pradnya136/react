@@ -35,7 +35,8 @@ const {name,cuisines,locality,sla,costForTwoMessage,avgRating,totalRatingsString
                     <h2 className="font-extralight mx-2 text-xs">{cuisines.join(", ")}</h2>
                     <h2 className="font-extralight mx-2 text-xs">{locality}</h2>
                     {/* <h2 className="font-extralight mx-2 text-xs py-2">{expectationNotifiers[0].text}</h2> */}
-                    <h2 className="font-bold text-sm mt-4 mx-2">{sla.deliveryTime} mins<span className="text-transparent">____</span>{costForTwoMessage}</h2>
+                    <h2 className="font-bold text-sm mt-4 mx-2">{sla.deliveryTime} mins
+                    <span className="text-transparent">____</span>{costForTwoMessage}</h2>
                   
                 </div>
                 <div>

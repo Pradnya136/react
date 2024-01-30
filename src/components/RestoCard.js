@@ -1,8 +1,13 @@
 
 import {CDN_RESTO_LOGO } from "../utils/constant";
-
+import React from "react";
+import {useContext} from "react";
+import UserContext from "../utils/userContext";
 
 const RestoCard = ( props ) => {
+
+    
+    const contextDataa = useContext(UserContext);
     const {resData} = props;
     const {name,avgRating,costForTwo,cuisines,cloudinaryImageId,sla,locality} = resData?.info;
     return (//scale-105 transition-transform ease-out
@@ -19,6 +24,7 @@ const RestoCard = ( props ) => {
             <h4 className="text-slate-600  ">{cuisines.join(", ")}</h4>
             <h4 className="text-slate-600 ">{locality}</h4>
             <h4 className="text-slate-600 ">{costForTwo}</h4>
+            <h4 className="text-slate-600 ">user:{place}</h4>
           
           
           

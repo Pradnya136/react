@@ -7,23 +7,23 @@ class User_class extends React.Component{
             count : 0,
             age:""
         }
-        console.log("Child contructor(){}")
+        // console.log("Child contructor(){}")
         
     }
 
     componentDidMount(){
         this.intervalcallingfn = setInterval(()=>{
-            console.log("Calling interval fn")
+            // console.log("Calling interval fn")
         },1000)
     }
     
     componentWillUnmount(){
         clearInterval(this.intervalcallingfn)
-        console.log("cleaned interval fn")
+        // console.log("cleaned interval fn")
     }
     
     render(){
-        console.log("child render(){}")
+        // console.log("child render(){}")
         const {name}= this.props;  //destructuring props
         const {count} = this.state; //destructuring state
         return(  

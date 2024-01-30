@@ -4,14 +4,16 @@ import { useState, useEffect } from "react";
 import { SWIGGY_MAIN_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-
-
+import UserContext from "../utils/userContext";
+import { useContext } from "react";
 
 const Body = ()=>{
    //local state variable = super powerful variable
     const [listOfResto, setListOfResto] = useState([]);
     const onlineStatus = useOnlineStatus();
     const RestoCardWithDiscount = RestoCardDiscount(RestoCard);
+
+
 
     useEffect(() => {
         fetchData();
@@ -72,6 +74,8 @@ if(onlineStatus === false) return <h1>Looks like your internet connection is gon
                     Top Rated Resto's
                 </button>
             </div>
+
+ 
          
             <div className="flex flex-wrap justify-center items-center  " >
                 {
