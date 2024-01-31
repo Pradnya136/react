@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { SWIGGY_MAIN_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/userContext";
+import UserContext from "../utils/UserContext";
 import { useContext } from "react";
 
 const Body = ()=>{
@@ -13,6 +13,8 @@ const Body = ()=>{
     const onlineStatus = useOnlineStatus();
     const RestoCardWithDiscount = RestoCardDiscount(RestoCard);
 
+
+    const {setUserName, LoggedInUser} = useContext(UserContext);
 
 
     useEffect(() => {
@@ -74,7 +76,11 @@ if(onlineStatus === false) return <h1>Looks like your internet connection is gon
                     Top Rated Resto's
                 </button>
             </div>
+            <div className="flex items-center justify-center">
+                <label>UserInput:</label>
 
+                <input value={LoggedInUser} onChange={(event)=> setUserName(event.target.value)} className="border border-blue-900 m-6 p-3"/>
+            </div>
  
          
             <div className="flex flex-wrap justify-center items-center  " >

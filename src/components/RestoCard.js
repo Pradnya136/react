@@ -2,7 +2,7 @@
 import {CDN_RESTO_LOGO } from "../utils/constant";
 import React from "react";
 import {useContext} from "react";
-import UserContext from "../utils/userContext";
+import UserContext from "../utils/UserContext";
 
 const RestoCard = ( props ) => {
 
@@ -24,7 +24,7 @@ const RestoCard = ( props ) => {
             <h4 className="text-slate-600  ">{cuisines.join(", ")}</h4>
             <h4 className="text-slate-600 ">{locality}</h4>
             <h4 className="text-slate-600 ">{costForTwo}</h4>
-            <h4 className="text-slate-600 ">user:{place}</h4>
+            <h4 className="text-slate-600 ">user:{contextDataa.LoggedInUser}</h4>
           
           
           

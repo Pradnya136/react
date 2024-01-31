@@ -2,7 +2,7 @@ import { useState,useContext } from "react";
 
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/userContext";
+import UserContext from "../utils/UserContext";
 
 const NavItems = () => {
 
@@ -26,7 +26,7 @@ const onlineStatus = useOnlineStatus()
                 <Link to ={"/contact"} className="custom-link"><li>Contact</li></Link>
                 {/* <Link to ={"/grocery"} className="custom-link"><li>Grocery</li></Link> */}
                 <li className="custom-link">Cart</li>
-                <li className="custom-link">User:{place}</li>
+                <li className="custom-link">User:{contextData.LoggedInUser}</li>
                 <li className="bg-amber-400 shadow-lg p-3 rounded ">
                     <button onClick={()=> setState(toggle())}
                     className="login-btn">{state}</button>
