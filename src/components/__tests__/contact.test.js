@@ -27,7 +27,8 @@ describe("Contact us page test cases",()=>{
         const Inputs = screen.getAllByRole("textbox")
 
         expect(Inputs.length).toBe(2)
-    })
+    });
+
 }
     
 )
