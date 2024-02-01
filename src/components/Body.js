@@ -77,7 +77,7 @@ if(onlineStatus === false) return <h1>Looks like your internet connection is gon
                 </button>
             </div>
             <div className="flex items-center justify-center">
-                <label>UserInput:</label>
+                <label>Username :</label>
 
                 <input value={LoggedInUser} onChange={(event)=> setUserName(event.target.value)} className="border border-blue-900 m-6 p-3"/>
             </div>

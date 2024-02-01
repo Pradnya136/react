@@ -1,10 +1,15 @@
 import { useState,useContext } from "react";
-
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
+
+
 
 const NavItems = () => {
+//subscribing to store to access store 
+const cartt = useSelector((store) => store.cart.items);
+console.log(cartt)
 
 const contextData = useContext(UserContext)    
 const onlineStatus = useOnlineStatus()
@@ -25,7 +30,8 @@ const onlineStatus = useOnlineStatus()
                 <Link to ={"/about"} className="custom-link"><li>About</li></Link>
                 <Link to ={"/contact"} className="custom-link"><li>Contact</li></Link>
                 {/* <Link to ={"/grocery"} className="custom-link"><li>Grocery</li></Link> */}
-                <li className="custom-link">Cart</li>
+                <Link to ={"/cart"} className="custom-link font-bold "><li>Cart:({cartt.length})</li></Link>
+          
                 <li className="custom-link">User:{contextData.LoggedInUser}</li>
                 <li className="bg-amber-400 shadow-lg p-3 rounded ">
                     <button onClick={()=> setState(toggle())}

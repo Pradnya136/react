@@ -87,3 +87,34 @@ CORS is a security feature that restricts web pages from making requests to a di
 Assignment 3 - 
 fetching swiggys api  = swiggy.com > inspect > reload page > network > fetch xhr  search fr resto list
 
+---------------------------------------------------------------
+test cases :- 
+
+3 types of test cases :- 1. Unit testing
+                         2.Integration testing
+                         3.End to End testing 
+
+
+
+----------------------------------------------------------------
+How to setup application to write test cases:- 
+    1.install react testing library
+    2.install jest library
+    3.under using babel from jest website - add/install additional dependencies to use along with babel from jest website
+      npm install --save-dev babel-jest @babel/core @babel/preset-env
+    4.from jest website -config babel on root level
+    5.then config .parcelrc file on root to disable default parcel transpilation from parcel website > js>babel>usage with other tools
+    6.do npx jest --init (config jest ans qus - no,jsdom,yes,babel,yes)
+    7.install jsdom liabray = npm i -D jest-enevironment-jsdom
+--------------------------------------------------------------
+start writing test cases inside components folder create __tests__ folder inside that create tests files. eg sum.test.js
+we write a test() which takes 2 arg = 1. a string which is description
+                                      2. which is a callbck fn()
+
+                                      test("this should return sum of two no.s", {
+                                        const res = sum(5,2)
+        this is asseration -->          expect(res).toBe(7)
+                                      })
+
+                                      __ == dunder
+

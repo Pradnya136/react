@@ -24,7 +24,7 @@ const RestoCard = ( props ) => {
             <h4 className="text-slate-600  ">{cuisines.join(", ")}</h4>
             <h4 className="text-slate-600 ">{locality}</h4>
             <h4 className="text-slate-600 ">{costForTwo}</h4>
-            <h4 className="text-slate-600 ">user:{contextDataa.LoggedInUser}</h4>
+            {/* <h4 className="text-slate-600 ">user:{contextDataa.LoggedInUser}</h4> */}
           
           
           
