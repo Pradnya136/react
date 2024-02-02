@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 const NavItems = () => {
 //subscribing to store to access store 
 const cartt = useSelector((store) => store.cart.items);
-console.log(cartt)
+//console.log(cartt)
 
 const contextData = useContext(UserContext)    
 const onlineStatus = useOnlineStatus()
