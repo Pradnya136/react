@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ItemList from "./ItemList";
 import { clearCart } from "../utils/cartSlice";
 
+
 const Cart = () =>{
     const cartItems = useSelector((store) => store.cart.items)
     
@@ -14,11 +15,14 @@ const Cart = () =>{
 
     return(<>
         <h1 className="font-bold flex justify-center align-middle items-center p-4 m-4 text-xl">Cart </h1>
-        {/* <button onClick={handleClearCart}
-        className="font-bold flex justify-center align-middle items-center bg-slate-500 text-white p-3 rounded-lg">Clear Cart
-        </button> */}
+      <div className="flex justify-center align-middle items-center">
+      <button onClick={handleClearCart}
+        className="font-bold flex justify-center align-middle m-2 items-center bg-slate-900 hover:bg-slate-600 text-white p-3 rounded-lg">Clear Cart
+        </button>
+      </div>
     
       <div className="flex justify-center">
+
 
         <div className="w-6/12  flex justify-center align-middle items-center">
   

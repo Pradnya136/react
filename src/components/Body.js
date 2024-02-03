@@ -42,7 +42,7 @@ if(onlineStatus === false) return <h1>Looks like your internet connection is gon
     //conditional rendering
     return listOfResto.length === 0?<Shimmer/>:(
         <div className="body">
-            <div className="bg-slate-100 flex items-center justify-center p-5 ">
+            <div className="bg-slate-50 mt-1 flex items-center justify-center p-5 ">
                 <form > 
                 <input type="text"
                       className="w-96 p-4 rounded shadow-md"  
