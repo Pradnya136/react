@@ -30,7 +30,7 @@ const onlineStatus = useOnlineStatus()
                 <Link to ={"/about"} className="custom-link"><li>About</li></Link>
                 <Link to ={"/contact"} className="custom-link"><li>Contact</li></Link>
                 {/* <Link to ={"/grocery"} className="custom-link"><li>Grocery</li></Link> */}
-                <Link to ={"/cart"} className="custom-link font-bold "><li>🛒:({cartt.length})</li></Link>
+                <Link to ={"/cart"} className="custom-link "><li>Cart 🛒({cartt.length})</li></Link>
           
                 <li className="custom-link">User:{contextData.LoggedInUser}</li>
                 <li className="bg-yellow-400 text-red-700 font-bold shadow-lg p-3 rounded ">

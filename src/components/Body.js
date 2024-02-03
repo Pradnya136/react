@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 import { SWIGGY_MAIN_URL } from "../utils/constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/UserContext";
-import { useContext } from "react";
+
 
 const Body = ()=>{
    //local state variable = super powerful variable
@@ -14,7 +13,6 @@ const Body = ()=>{
     const RestoCardWithDiscount = RestoCardDiscount(RestoCard);
 
 
-    const {setUserName, LoggedInUser} = useContext(UserContext);
 
 
     useEffect(() => {
@@ -30,7 +28,7 @@ const Body = ()=>{
     //   console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
       //optional chaining - handling data in better way it does not throw error if we dont get undefined data
       resList = json.data.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants;
-    console.log(resList,"json data resto list")
+    // console.log(resList,"json data resto list")
       setListOfResto(json.data.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants)
     };
     
@@ -45,7 +43,7 @@ if(onlineStatus === false) return <h1>Looks like your internet connection is gon
             <div className="bg-slate-50 mt-1 flex items-center justify-center p-5 ">
                 <form > 
                 <input type="text"
-                      className="w-96 p-4 rounded shadow-md"  
+                      className="w-96  p-4 rounded shadow-md"  
                        placeholder="Search for Restautrant by entering name.. " 
                        onChange={(event)=>{
                         const filterd = resList.filter(res => res.info.name.toLowerCase().includes(event.target.value.toLowerCase()));
@@ -64,23 +62,21 @@ if(onlineStatus === false) return <h1>Looks like your internet connection is gon
                        >
                   
                 </input> 
-                </form><div className="text-4xl p-4 ">&#128269;</div>  
-            </div>
-            <div className="flex items-center justify-center">
+                </form>
+                {/* <div className="text-4xl p-4 ">&#128269;</div>   */}
                 <button 
-                       className="bg-gray-200 p-4 rounded-md shadow-xl m-4 "
+                       className="bg-gray-200 p-4 rounded-md shadow-md m-4 hover:bg-slate-200 "
                        onClick={()=>{
                        const filteredList = resList.filter(res => res.info.avgRating > 4) ;setListOfResto(filteredList)
                   console.log("fav resto clickeds")
                 }}>
-                    Top Rated Resto's
+                    Top Rated Restaurants
                 </button>
             </div>
             <div className="flex items-center justify-center">
-                <label>Username :</label>
-
-                <input value={LoggedInUser} onChange={(event)=> setUserName(event.target.value)} className="border border-blue-900 m-6 p-3"/>
+  
             </div>
+
  
          
             <div className="flex flex-wrap justify-center items-center  " >

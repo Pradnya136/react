@@ -20,10 +20,10 @@ const RestoCard = ( props ) => {
 
             </img>
             <h2 className=" text-lg mt-2 mb-1 font-bold">{name}</h2>
-            <h3 className="text-slate-600 font-medium">⭐ {avgRating} | {sla.slaString}</h3>
-            <h4 className="text-slate-600  ">{cuisines.join(", ")}</h4>
-            <h4 className="text-slate-600 ">{locality}</h4>
-            <h4 className="text-slate-600 ">{costForTwo}</h4>
+            <h3 className="text-slate-600 text-sm font-medium">⭐ {avgRating} | {sla.slaString}</h3>
+            <h4 className="text-slate-600 text-sm ">{cuisines.join(", ")}</h4>
+            <h4 className="text-slate-600 text-sm">{locality}</h4>
+            <h4 className="text-slate-600 text-sm">{costForTwo}</h4>
             {/* <h4 className="text-slate-600 ">user:{contextDataa.LoggedInUser}</h4> */}
           
           

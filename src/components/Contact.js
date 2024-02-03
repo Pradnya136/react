@@ -1,10 +1,12 @@
+import Form from "../components/Form";
+
 const Contact = ()=>{
     return (
-        <div>
-            <h1>This is where you contact us !</h1>
-           <label>Name:</label> <input placeholder="name"/>
-            <label>Email:</label><input/>
-            <button>submit</button>
+        <div className="justify-center flex flex-col items-center">
+            <h1 className="p-4 m-2 font-bold text-3xl">Contact us !</h1>
+       
+            <Form/>
+      
         </div>
     )
 }
