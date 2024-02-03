@@ -3,14 +3,15 @@ This is a web application for food delivery created using React.js. It uses the 
 
 Features :
 
-Shimmer Ui
-Lazy Loading
-Parcel Bundler
-Responsive
-Real Time Data Fetch From Api
-Working Search Bar
-Cart Using Redux Tool Kit
-Error Page
+> Shimmer Ui
+> Lazy Loading
+> Parcel Bundler
+> Responsive
+> Real Time Data Fetch From Api
+> Working Search Bar
+> Cart Using Redux Tool Kit
+> Error Page
+> Test cases
 
 DISCLAIMER :
 If you are trying to access the live website kindly use this extension and enable it so that 3rd party API can run. https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en
@@ -40,6 +41,6 @@ Contributions are welcome! If you would like to contribute, please create a pull
 Credits :
 This application uses the Swiggy public API.
 
-=========================================================================================================================================================
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 Please note that due to third-party API usage, there may be instances where images may not be displayed properly.
 =========================================================================================================================================================
