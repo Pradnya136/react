@@ -27,7 +27,7 @@ const Body = ()=>{
     //   console.log(json,"body json")
     //   console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
       //optional chaining - handling data in better way it does not throw error if we dont get undefined data
-      resList = json.data.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants;
+    //   resList = json.data.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants;
     // console.log(resList,"json data resto list")
       setListOfResto(json.data.cards[4].card?.card?.gridElements?.infoWithStyle?.restaurants)
     };
