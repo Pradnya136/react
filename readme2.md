@@ -87,7 +87,7 @@ CORS is a security feature that restricts web pages from making requests to a di
 Assignment 3 - 
 fetching swiggys api  = swiggy.com > inspect > reload page > network > fetch xhr  search fr resto list
 
----------------------------------------------------------------
+---------------------------------------------------------------ther are 
 test cases :- 
 
 3 types of test cases :- 1. Unit testing
