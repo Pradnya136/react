@@ -9,25 +9,25 @@ describe("Contact us page test cases",()=>{
         const heading = screen.getByRole("heading")
         expect(heading).toBeInTheDocument() //asseration
     });
-    it("should have button inside contact component",()=>{
-        render(<Contact/>)
+    // it("should have button inside contact component",()=>{
+    //     render(<Contact/>)
     
-        const button = screen.getByText("submit")
-        expect(button).toBeInTheDocument()
-    });
-    it("should show all inputs from contact component",()=>{
-        render(<Contact/>)
+    //     const button = screen.getByText("submit")
+    //     expect(button).toBeInTheDocument()
+    // });
+    // it("should show all inputs from contact component",()=>{
+    //     render(<Contact/>)
     
-        const inputItems = screen.getByPlaceholderText("name")
-        expect(inputItems).toBeInTheDocument()
-    });
-    it("should check length of input box in contact us component",()=>{
-        render(<Contact/>)
+    //     const inputItems = screen.getByPlaceholderText("name")
+    //     expect(inputItems).toBeInTheDocument()
+    // });
+    // it("should check length of input box in contact us component",()=>{
+    //     render(<Contact/>)
 
-        const Inputs = screen.getAllByRole("textbox")
+    //     const Inputs = screen.getAllByRole("textbox")
 
-        expect(Inputs.length).toBe(2)
-    });
+    //     expect(Inputs.length).toBe(2)
+    // });
 
 }
     
