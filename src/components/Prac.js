@@ -46,5 +46,3 @@ export default Example;
 
 //*confusion caused by the use of item.card && item.card. This is a defensive 
 //check to ensure that item.card exists before attempting to access its properties.
-
-//So, !showItems means the opposite of whatever state showItems is currently in.
