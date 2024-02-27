@@ -118,3 +118,38 @@ we write a test() which takes 2 arg = 1. a string which is description
 
                              dunder = __test__
 
+
+Lesson 3 QnA - 
+
+Q1. What is NPM?
+NPM, or Node Package Manager, is the default package manager for Node.js and JavaScript. It facilitates the installation, management, and sharing of JavaScript packages, providing a central registry for developers to publish and discover code packages.
+
+Q2. What is Parcel.js?
+Parcel.js is a fast, zero-config JavaScript module bundler. It simplifies the build process by requiring minimal configuration, allowing developers to focus more on coding and less on setup. 
+
+Q3. What is Webpack?
+Webpack is a popular module bundler for JavaScript applications. It takes your project's dependencies, such as JavaScript, CSS, and images, and bundles them into static assets.
+
+Q4. What is NPX command?
+npx is a package runner tool that comes with NPM. It is used to execute packages directly from the NPM registry, making it easy to run binaries from dependencies without the need to install them globally.
+
+Q5. What is the Parcel-cache folder, and why is it created?
+The parcel-cache folder is created by Parcel.js to store cached data, enhancing build performance. It helps in speeding up subsequent builds by reusing previously processed data, ultimately optimizing the development workflow.
+
+Q6. What are dev dependencies?
+ devDependencies section of package.json, include packages necessary for development and testing but not for the production environment. 
+
+Q7. Features of Parcel.js?
+Parcel.js boasts features like zero configuration, automatic code splitting, hot module replacement, and out-of-the-box support for various asset types.
+
+Q8. What is the .gitignore file?
+The .gitignore file specifies files and directories that Git should ignore. It helps in preventing unnecessary files, like build artifacts and dependencies, from being tracked by version control.
+
+Q9. What is the difference between package.json and package-lock.json?
+package.json lists project metadata and dependencies, while package-lock.json provides a detailed, version-specific representation of the project's dependency tree. 
+
+Q10. Why should you not modify package-lock.json?
+Modifying package-lock.json directly is discouraged as it can lead to inconsistencies in dependency versions. It is automatically generated and should be treated as a calculated output rather than an editable file.
+
+Q11. What are node_modules?
+The node_modules directory contains the dependencies required for a project. It is automatically created by NPM during the installation of packages.
